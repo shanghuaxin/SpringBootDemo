@@ -1,0 +1,22 @@
+# tomcat端口
+server:
+ port: 80
+
+spring:
+ datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://192.168.70.105:3306/test
+  username: coolteam
+  password: coolteam@123
+ jpa: 
+  # generate-ddl: true
+  hibernate: 
+   ddl-auto: update
+  show-sql: true
+ jackson: 
+  serialization: 
+   indent_output: true #表示格式化输出的json字符串
+
+redis:
+ hostname: 127.0.0.1
+ port: 6379 

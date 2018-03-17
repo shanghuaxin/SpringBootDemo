@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.seecom.com.cn/webservice" targetNamespace="http://www.seecom.com.cn/webservice"
+	elementFormDefault="qualified">
+
+	<xs:element name="getCountryRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getCountryResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="country" type="tns:country" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- 自定义对象的定义 -->
+	<xs:complexType name="country">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="capital" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>
